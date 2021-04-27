@@ -17,7 +17,7 @@ features = { "src/test/resources/Discovery.feature" },
 
 glue = { "gluecodes" },
 
-tags = { "@smoke" },
+tags = { "@regression" },
 
 plugin={"pretty", "html:target/cucumber"})
 

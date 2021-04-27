@@ -31,44 +31,49 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 11,
-  "name": "Login functionality validation",
+  "line": 23,
+  "name": "Login functionality validation negative",
   "description": "",
-  "id": "testing-current-feature;login-functionality-validation",
+  "id": "testing-current-feature;login-functionality-validation-negative",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 10,
-      "name": "@smoke"
+      "line": 22,
+      "name": "@regression"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "I want to launch by \"\u003cURL\u003e\" in chrome browser",
+  "line": 24,
+  "name": "I want to launch by \"\u003cURL\u003e\" in IE browser",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 13,
-  "name": "I enter username in discovery login page as \"\u003cName\u003e\"",
+  "line": 25,
+  "name": "I enter username in cognizant login page as \"\u003cName\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 14,
-  "name": "I enter my valid password as \"\u003cPassword\u003e\"",
+  "line": 26,
+  "name": "I enter my invalid password as \"\u003cPassword\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 15,
-  "name": "I click the login button",
+  "line": 27,
+  "name": "I click the logout button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "I should see failure",
   "keyword": "And "
 });
 formatter.examples({
-  "line": 17,
+  "line": 30,
   "name": "",
   "description": "",
-  "id": "testing-current-feature;login-functionality-validation;",
+  "id": "testing-current-feature;login-functionality-validation-negative;",
   "rows": [
     {
       "cells": [
@@ -76,120 +81,100 @@ formatter.examples({
         "Name",
         "Password"
       ],
-      "line": 18,
-      "id": "testing-current-feature;login-functionality-validation;;1"
+      "line": 31,
+      "id": "testing-current-feature;login-functionality-validation-negative;;1"
     },
     {
       "cells": [
         "https://www.discover-view.com/",
-        "User",
-        "success"
+        "wronguser",
+        "wrongpswd"
       ],
-      "line": 19,
-      "id": "testing-current-feature;login-functionality-validation;;2"
+      "line": 32,
+      "id": "testing-current-feature;login-functionality-validation-negative;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 186200,
+  "duration": 143200,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 19,
-  "name": "Login functionality validation",
+  "line": 32,
+  "name": "Login functionality validation negative",
   "description": "",
-  "id": "testing-current-feature;login-functionality-validation;;2",
+  "id": "testing-current-feature;login-functionality-validation-negative;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 10,
-      "name": "@smoke"
-    },
-    {
       "line": 6,
       "name": "@tag"
+    },
+    {
+      "line": 22,
+      "name": "@regression"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "I want to launch by \"https://www.discover-view.com/\" in chrome browser",
+  "line": 24,
+  "name": "I want to launch by \"https://www.discover-view.com/\" in IE browser",
   "matchedColumns": [
     0
   ],
   "keyword": "Given "
 });
 formatter.step({
-  "line": 13,
-  "name": "I enter username in discovery login page as \"User\"",
+  "line": 25,
+  "name": "I enter username in cognizant login page as \"wronguser\"",
   "matchedColumns": [
     1
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 14,
-  "name": "I enter my valid password as \"success\"",
+  "line": 26,
+  "name": "I enter my invalid password as \"wrongpswd\"",
   "matchedColumns": [
     2
   ],
   "keyword": "Then "
 });
 formatter.step({
-  "line": 15,
-  "name": "I click the login button",
+  "line": 27,
+  "name": "I click the logout button",
   "keyword": "And "
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "https://www.discover-view.com/",
-      "offset": 21
-    }
-  ],
-  "location": "stepdefinition.i_want_to_launch_by_in_chrome_browser(String)"
+formatter.step({
+  "line": 28,
+  "name": "I should see failure",
+  "keyword": "And "
 });
+formatter.match({});
 formatter.result({
-  "duration": 8270469400,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "User",
-      "offset": 45
-    }
-  ],
-  "location": "stepdefinition.i_enter_username_in_discovery_login_page_as(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 159384700,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "success",
-      "offset": 30
-    }
-  ],
-  "location": "stepdefinition.i_enter_my_valid_password_as(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 131481900,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "stepdefinition.i_click_the_login_button()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 1750556600,
-  "status": "passed"
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.after({
-  "duration": 741309600,
-  "status": "passed"
+  "duration": 218200,
+  "error_message": "java.lang.NullPointerException\r\n\tat gluecodes.stepdefinition.teardown(stepdefinition.java:65)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)\r\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)\r\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)\r\n\tat org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)\r\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)\r\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\r\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)\r\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)\r\n\tat com.sun.proxy.$Proxy2.processTestClass(Unknown Source)\r\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)\r\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\r\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)\r\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)\r\n\tat org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)\r\n\tat org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)\r\n\tat org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\r\n\tat org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)\r\n\tat java.lang.Thread.run(Thread.java:745)\r\n",
+  "status": "failed"
 });
 });

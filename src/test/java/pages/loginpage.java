@@ -20,7 +20,7 @@ public class loginpage {
 	
 	
 	public void login() {
-		Username.sendKeys("venthan");
+		Username.sendKeys("priya");
 		Password.sendKeys("Password");
 		Loginbutton.click();
 	}

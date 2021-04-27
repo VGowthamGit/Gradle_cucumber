@@ -59,6 +59,34 @@ public class stepdefinition {
 	    // Write code here that turns the phrase above into concrete actions
 	  lp.Loginbutton.click();
 	}
+	@Given("^I want to launch by \"([^\"]*)\" in IE browser$")
+	public void i_want_to_launch_by_in_IE_browser(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+
+	}
+
+	@When("^I enter username in cognizant login page as \"([^\"]*)\"$")
+	public void i_enter_username_in_cognizant_login_page_as(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+
+	}
+
+	@Then("^I enter my invalid password as \"([^\"]*)\"$")
+	public void i_enter_my_invalid_password_as(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+	}
+
+	@Then("^I click the logout button$")
+	public void i_click_the_logout_button() throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+
+	}
+
+	@Then("^I should see failure$")
+	public void i_should_see_failure() throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+
+	}
 	@After
 	public void teardown()
 	{
